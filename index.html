@@ -1,86 +1,187 @@
 <!DOCTYPE html>
 <html>
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<title>TL Construction & Framing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Saskatoon Framing Contractor | TL Framing & Construction</title>
+
+<meta name="description" content="TL Framing & Construction is a professional framing contractor in Saskatoon specializing in house framing, basement framing and garage framing services.">
+
+<meta name="robots" content="index, follow">
+
+<!-- Local SEO Schema -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "GeneralContractor",
+ "name": "TL Framing & Construction",
+ "url": "https://tlframing.ca",
+ "telephone": "+1-306-XXX-XXXX",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Saskatoon",
+   "addressRegion": "SK",
+   "addressCountry": "CA"
+ },
+ "areaServed": {
+   "@type": "City",
+   "name": "Saskatoon"
+ },
+ "description": "Professional framing contractor in Saskatoon specializing in residential house framing, basement framing and garage framing."
+}
+</script>
 
 <style>
 
 body{
-font-family: Arial, sans-serif;
+font-family:Arial, sans-serif;
 margin:0;
-background:#f4f4f4;
+color:#333;
+line-height:1.6;
 }
 
 header{
-background:#222;
+background:#1e1e1e;
 color:white;
-padding:60px 20px;
+text-align:center;
+padding:25px;
+}
+
+nav{
+background:#333;
+text-align:center;
+padding:12px;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+background:#f4f4f4;
+padding:90px 20px;
 text-align:center;
 }
 
-header h1{
-margin:0;
-font-size:40px;
+.hero h1{
+font-size:38px;
+margin-bottom:10px;
 }
 
-header p{
+.hero p{
 font-size:18px;
-}
-
-button{
-background:#ff6600;
-border:none;
-padding:14px 25px;
-color:white;
-font-size:16px;
-cursor:pointer;
-border-radius:5px;
-margin-top:10px;
-}
-
-.container{
-max-width:1000px;
+max-width:800px;
 margin:auto;
-padding:40px;
-background:white;
 }
 
-h2{
-border-bottom:2px solid #eee;
-padding-bottom:10px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
+.btn{
+display:inline-block;
 margin-top:20px;
+padding:12px 28px;
+background:#ff6600;
+color:white;
+text-decoration:none;
+border-radius:6px;
 }
 
-.card{
+section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.service{
+background:#f7f7f7;
+padding:25px;
+border-radius:10px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+}
+
+.projects img{
+width:100%;
+border-radius:10px;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.review{
 background:#f7f7f7;
 padding:20px;
-border-radius:5px;
+border-radius:10px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:15px;
-margin-top:20px;
+.quote-form{
+max-width:600px;
+margin:auto;
 }
 
-.gallery img{
+.quote-form input,
+.quote-form textarea{
 width:100%;
-border-radius:5px;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:16px;
+}
+
+.quote-form button{
+background:#ff6600;
+color:white;
+border:none;
+padding:14px 22px;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
 }
 
 .contact{
-background:#222;
+text-align:center;
+}
+
+footer{
+background:#1e1e1e;
 color:white;
 text-align:center;
-padding:40px;
+padding:25px;
+margin-top:40px;
+}
+
+.callbtn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#28a745;
+color:white;
+padding:16px 22px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 10px rgba(0,0,0,0.2);
 }
 
 </style>
@@ -90,73 +191,149 @@ padding:40px;
 <body>
 
 <header>
-<h1>TL Construction & Framing</h1>
-<p>Professional Framing Contractor in Saskatoon</p>
-<button>Call Now</button>
+
+<h2>TL Framing & Construction</h2>
+<p>Saskatoon Framing Contractor</p>
+
 </header>
 
-<div class="container">
+<nav>
 
-<h2>Our Services</h2>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#reviews">Reviews</a>
+<a href="#quote">Quote</a>
+<a href="#contact">Contact</a>
 
-<div class="grid">
+</nav>
 
-<div class="card">House Framing</div>
-<div class="card">Garage Framing</div>
-<div class="card">Basement Framing</div>
-<div class="card">Deck Framing</div>
-<div class="card">Custom Home Framing</div>
-<div class="card">Renovation Framing</div>
+<section class="hero">
 
+<h1>Saskatoon Framing Contractor | TL Framing & Construction</h1>
+
+<p>
+TL Framing & Construction is a professional framing contractor serving Saskatoon, Saskatchewan.
+We specialize in residential house framing, basement framing and garage framing for builders and homeowners.
+</p>
+
+<a href="#quote" class="btn">Get a Free Quote</a>
+
+</section>
+
+<section id="services">
+
+<h2>Our Framing Services</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>House Framing</h3>
+<p>Professional structural framing for new residential construction projects in Saskatoon.</p>
 </div>
 
-<h2>Recent Projects</h2>
-
-<div class="gallery">
-
-<img src="https://picsum.photos/400/300?1">
-<img src="https://picsum.photos/400/300?2">
-<img src="https://picsum.photos/400/300?3">
-
+<div class="service">
+<h3>Basement Framing</h3>
+<p>Accurate and reliable framing for basement development projects.</p>
 </div>
 
-<h2>Client Testimonials</h2>
-
-<div class="grid">
-
-<div class="card">
-<p>"Reliable framing crew and excellent workmanship."</p>
-<strong>- Local Builder</strong>
-</div>
-
-<div class="card">
-<p>"Very professional and finished the project on time."</p>
-<strong>- Saskatoon Homeowner</strong>
-</div>
-
-<div class="card">
-<p>"Great communication and high quality framing work."</p>
-<strong>- Contractor</strong>
-</div>
-
-<div class="card">
-<p>"Would definitely hire again for future projects."</p>
-<strong>- Builder</strong>
+<div class="service">
+<h3>Garage Framing</h3>
+<p>Strong and precise framing for attached and detached garages.</p>
 </div>
 
 </div>
 
+</section>
+
+<section id="projects">
+
+<h2>Our Framing Projects</h2>
+
+<div class="projects">
+
+<img src="project1.jpg" alt="House framing project in Saskatoon">
+
+<img src="project2.jpg" alt="Basement framing contractor Saskatoon">
+
+<img src="project3.jpg" alt="Garage framing project Saskatoon">
+
+<img src="project4.jpg" alt="Residential framing contractor Saskatoon">
+
 </div>
 
-<div class="contact">
+</section>
 
-<h2>Contact Us</h2>
+<section id="reviews">
 
-<p>Phone: xxx-xxx-xxxx</p>
+<h2>Client Reviews</h2>
+
+<div class="testimonials">
+
+<div class="review">
+<p>"Very professional framing crew. Work completed on time and quality was excellent."</p>
+<strong>- Home Builder</strong>
+</div>
+
+<div class="review">
+<p>"Reliable contractor and great communication throughout the project."</p>
+<strong>- Saskatoon Client</strong>
+</div>
+
+<div class="review">
+<p>"Solid framing work and efficient team. Highly recommend."</p>
+<strong>- Construction Partner</strong>
+</div>
+
+</div>
+
+</section>
+
+<section id="quote">
+
+<h2>Request a Free Quote</h2>
+
+<div class="quote-form">
+
+<form action="https://formsubmit.co/info@tlframing.ca" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<textarea name="message" placeholder="Project Details"></textarea>
+
+<button type="submit">Submit Quote Request</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact TL Framing & Construction</h2>
+
+<p>Owner: Zhitong Li</p>
+
+<p>Phone: 306-XXX-XXXX</p>
+
 <p>Email: info@tlframing.ca</p>
+
 <p>Saskatoon, Saskatchewan</p>
 
-</div>
+</section>
+
+<footer>
+
+<p>© 2026 TL Framing & Construction</p>
+
+</footer>
+
+<a href="tel:306XXXXXXX" class="callbtn">Call Now</a>
 
 </body>
 </html>
+```
