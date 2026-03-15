@@ -11,6 +11,16 @@
 
 <style>
 
+/* BRAND COLORS */
+
+:root{
+--brand-yellow:#F5B400;
+--brand-dark:#2B2B2B;
+--light-gray:#f7f7f7;
+}
+
+/* GENERAL */
+
 body{
 font-family:Arial, sans-serif;
 margin:0;
@@ -21,7 +31,7 @@ line-height:1.6;
 /* HEADER */
 
 header{
-background:#1e1e1e;
+background:var(--brand-dark);
 color:white;
 padding:20px 30px;
 }
@@ -55,9 +65,10 @@ color:#ddd;
 /* NAV */
 
 nav{
-background:#333;
+background:var(--brand-dark);
 text-align:center;
 padding:12px;
+border-top:3px solid var(--brand-yellow);
 }
 
 nav a{
@@ -65,6 +76,10 @@ color:white;
 margin:0 15px;
 text-decoration:none;
 font-weight:bold;
+}
+
+nav a:hover{
+color:var(--brand-yellow);
 }
 
 /* HERO */
@@ -77,6 +92,16 @@ text-align:center;
 
 .hero h1{
 font-size:36px;
+color:var(--brand-dark);
+}
+
+.hero h1::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:var(--brand-yellow);
+margin:15px auto;
 }
 
 .hero p{
@@ -85,14 +110,21 @@ max-width:800px;
 margin:auto;
 }
 
+/* BUTTON */
+
 .btn{
 display:inline-block;
 margin-top:20px;
 padding:12px 28px;
-background:#ff6600;
-color:white;
+background:var(--brand-yellow);
+color:black;
 text-decoration:none;
 border-radius:6px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#d99f00;
 }
 
 /* SECTIONS */
@@ -101,6 +133,11 @@ section{
 padding:70px 20px;
 max-width:1100px;
 margin:auto;
+}
+
+h2{
+color:var(--brand-dark);
+margin-bottom:25px;
 }
 
 /* SERVICES */
@@ -112,9 +149,10 @@ gap:25px;
 }
 
 .service{
-background:#f7f7f7;
+background:var(--light-gray);
 padding:25px;
 border-radius:10px;
+border-top:4px solid var(--brand-yellow);
 }
 
 /* PROJECTS */
@@ -129,6 +167,11 @@ gap:18px;
 width:100%;
 border-radius:10px;
 cursor:pointer;
+transition:transform .3s;
+}
+
+.projects img:hover{
+transform:scale(1.04);
 }
 
 /* LIGHTBOX */
@@ -160,9 +203,10 @@ gap:20px;
 }
 
 .review{
-background:#f7f7f7;
+background:var(--light-gray);
 padding:20px;
 border-radius:10px;
+border-left:4px solid var(--brand-yellow);
 }
 
 /* QUOTE FORM */
@@ -183,13 +227,18 @@ font-size:16px;
 }
 
 .quote-form button{
-background:#ff6600;
-color:white;
+background:var(--brand-yellow);
+color:black;
 border:none;
 padding:14px 22px;
 font-size:16px;
 border-radius:6px;
 cursor:pointer;
+font-weight:bold;
+}
+
+.quote-form button:hover{
+background:#d99f00;
 }
 
 /* CONTACT */
@@ -201,7 +250,7 @@ text-align:center;
 /* FOOTER */
 
 footer{
-background:#1e1e1e;
+background:var(--brand-dark);
 color:white;
 text-align:center;
 padding:25px;
@@ -214,12 +263,17 @@ margin-top:40px;
 position:fixed;
 bottom:20px;
 right:20px;
-background:#28a745;
-color:white;
+background:var(--brand-yellow);
+color:black;
 padding:16px 22px;
 border-radius:40px;
 text-decoration:none;
 font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.callbtn:hover{
+background:#d99f00;
 }
 
 </style>
@@ -301,15 +355,10 @@ TL Construction & Framing provides reliable house framing, basement framing and 
 <div class="projects">
 
 <img src="images/project1.jpeg" onclick="openLightbox(this)" alt="House framing project in Saskatoon">
-
 <img src="images/project2.jpeg" onclick="openLightbox(this)" alt="Basement framing Saskatoon">
-
 <img src="images/project3.jpeg" onclick="openLightbox(this)" alt="House framing Saskatoon">
-
 <img src="images/project4.jpeg" onclick="openLightbox(this)" alt="Residential framing Saskatoon">
-
 <img src="images/project5.jpeg" onclick="openLightbox(this)" alt="House framing project in Saskatoon">
-
 <img src="images/project6.jpeg" onclick="openLightbox(this)" alt="House framing project in Saskatoon">
 
 </div>
@@ -353,15 +402,11 @@ TL Construction & Framing provides reliable house framing, basement framing and 
 <input type="hidden" name="_subject" value="New Quote Request - TL Construction & Framing">
 
 <input type="text" name="name" placeholder="Your Name" required>
-
 <input type="email" name="email" placeholder="Email Address" required>
-
 <input type="tel" name="phone" placeholder="Phone Number">
-
 <textarea name="message" placeholder="Project Details"></textarea>
 
 <label>Upload Blueprint / Photos (optional)</label>
-
 <input type="file" name="attachment" multiple>
 
 <button type="submit">Submit Quote Request</button>
@@ -377,7 +422,6 @@ TL Construction & Framing provides reliable house framing, basement framing and 
 <h2>Contact TL Construction & Framing</h2>
 
 <p>Email: lizhitongsk@gmail.com</p>
-
 <p>Saskatoon, Saskatchewan</p>
 
 </section>
@@ -409,4 +453,3 @@ document.getElementById("lightbox").style.display="none";
 
 </body>
 </html>
-```
