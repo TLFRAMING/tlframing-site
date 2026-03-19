@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Deck Cost Saskatoon | Calculator + Price Guide (2026)</title>
+
+<meta name="description" content="Calculate your deck cost in Saskatoon instantly. Get accurate pricing for pressure treated and composite decks. Free quote available.">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+.header {
+    background: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+}
+
+h1, h2 {
+    margin-top: 20px;
+}
+
+.calculator {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.cta {
+    background: black;
+    color: white;
+    padding: 12px;
+    margin-top: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.section {
+    margin-top: 30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+<h1>Deck Cost in Saskatoon (2026 Guide)</h1>
+<p>Instant Price Calculator + Free Quote</p>
+</div>
+
+<div class="container">
+
+<h2>Average Deck Cost in Saskatoon</h2>
+<p>
+The average cost to build a deck in Saskatoon ranges from 
+<strong>$25 to $45 per square foot</strong> depending on materials and design.
+</p>
+
+<ul>
+<li>Pressure Treated Wood: $25 - $30/sqft</li>
+<li>Composite Decking: $40 - $45/sqft</li>
+</ul>
+
+<div class="calculator">
+<h2>Deck Cost Calculator</h2>
+
+<label>Length (ft)</label>
+<input type="number" id="length">
+
+<label>Width (ft)</label>
+<input type="number" id="width">
+
+<label>Material</label>
+<select id="material">
+<option value="25">Pressure Treated ($25/sqft)</option>
+<option value="45">Composite ($45/sqft)</option>
+</select>
+
+<button onclick="calculate()">Calculate</button>
+
+<div class="result" id="result"></div>
+
+<h3>Get Exact Price + Same-Day Quote</h3>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="phone" placeholder="Phone Number">
+<input type="email" id="email" placeholder="Email">
+
+<div class="cta" onclick="sendLead()">Get My Quote</div>
+
+</div>
+
+<div class="section">
+<h2>What Affects Deck Cost?</h2>
+<ul>
+<li>Size of the deck</li>
+<li>Material type</li>
+<li>Height and stairs</li>
+<li>Railings and design</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Why Choose TL Construction & Framing?</h2>
+<ul>
+<li>Local Saskatoon contractor</li>
+<li>Competitive pricing</li>
+<li>Fast turnaround</li>
+<li>High-quality workmanship</li>
+</ul>
+</div>
+
+</div>
+
+<script>
+(function(){
+emailjs.init("YOUR_PUBLIC_KEY");
+})();
+
+let lastPrice = 0;
+
+function calculate() {
+    let length = document.getElementById("length").value;
+    let width = document.getElementById("width").value;
+    let material = document.getElementById("material").value;
+
+    if (!length || !width) {
+        alert("Enter size");
+        return;
+    }
+
+    let total = length * width * material;
+    lastPrice = total;
+
+    document.getElementById("result").innerHTML =
+        "Estimated Cost: $" + total.toLocaleString();
+}
+
+function sendLead() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+
+    if (!name || !phone || !email) {
+        alert("Fill all fields");
+        return;
+    }
+
+    let params = {
+        name: name,
+        phone: phone,
+        email: email,
+        price: lastPrice
+    };
+
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
+    .then(function() {
+        alert("Submitted! We will contact you soon.");
+    });
+}
+</script>
+
+</body>
+</html>
