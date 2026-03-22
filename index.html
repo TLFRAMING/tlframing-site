@@ -16,7 +16,6 @@
 <style>
 
 /* BRAND COLORS */
-
 :root{
 --brand-yellow:#F5B400;
 --brand-dark:#2B2B2B;
@@ -24,7 +23,6 @@
 }
 
 /* GENERAL */
-
 body{
 font-family:Arial, sans-serif;
 margin:0;
@@ -33,7 +31,6 @@ line-height:1.6;
 }
 
 /* HEADER */
-
 header{
 background:var(--brand-dark);
 color:white;
@@ -67,7 +64,6 @@ color:#ddd;
 }
 
 /* NAV */
-
 nav{
 background:var(--brand-dark);
 text-align:center;
@@ -80,6 +76,7 @@ color:white;
 margin:0 15px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
@@ -87,11 +84,13 @@ color:var(--brand-yellow);
 }
 
 /* HERO */
-
 .hero{
 background:#f4f4f4;
 padding:90px 20px;
 text-align:center;
+opacity:0;
+transform:translateY(40px);
+animation:fadeUp 1s ease forwards;
 }
 
 .hero h1{
@@ -115,7 +114,6 @@ margin:auto;
 }
 
 /* BUTTON */
-
 .btn{
 display:inline-block;
 margin-top:20px;
@@ -125,14 +123,15 @@ color:black;
 text-decoration:none;
 border-radius:6px;
 font-weight:bold;
+transition:0.3s;
 }
 
 .btn:hover{
 background:#d99f00;
+transform:scale(1.05);
 }
 
 /* SECTIONS */
-
 section{
 padding:70px 20px;
 max-width:1100px;
@@ -145,7 +144,6 @@ margin-bottom:25px;
 }
 
 /* SERVICES */
-
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -157,10 +155,16 @@ background:var(--light-gray);
 padding:25px;
 border-radius:10px;
 border-top:4px solid var(--brand-yellow);
+opacity:0;
+transform:translateY(40px);
+transition:all 0.6s ease;
+}
+
+.service:hover{
+transform:translateY(-8px);
 }
 
 /* PROJECTS */
-
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -171,7 +175,9 @@ gap:18px;
 width:100%;
 border-radius:10px;
 cursor:pointer;
-transition:transform .3s;
+transition:transform .3s, opacity .6s ease;
+opacity:0;
+transform:translateY(40px);
 }
 
 .projects img:hover{
@@ -179,7 +185,6 @@ transform:scale(1.04);
 }
 
 /* LIGHTBOX */
-
 .lightbox{
 display:none;
 position:fixed;
@@ -199,7 +204,6 @@ max-height:90%;
 }
 
 /* REVIEWS */
-
 .testimonials{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -211,13 +215,18 @@ background:var(--light-gray);
 padding:20px;
 border-radius:10px;
 border-left:4px solid var(--brand-yellow);
+opacity:0;
+transform:translateY(40px);
+transition:all 0.6s ease;
 }
 
-/* QUOTE FORM */
-
+/* QUOTE */
 .quote-form{
 max-width:600px;
 margin:auto;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.6s ease;
 }
 
 .quote-form input,
@@ -246,13 +255,14 @@ background:#d99f00;
 }
 
 /* CONTACT */
-
 .contact{
 text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.6s ease;
 }
 
 /* FOOTER */
-
 footer{
 background:var(--brand-dark);
 color:white;
@@ -262,7 +272,6 @@ margin-top:40px;
 }
 
 /* CALL BUTTON */
-
 .callbtn{
 position:fixed;
 bottom:20px;
@@ -274,10 +283,25 @@ border-radius:40px;
 text-decoration:none;
 font-weight:bold;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
+transition:0.3s;
 }
 
 .callbtn:hover{
 background:#d99f00;
+transform:scale(1.1);
+}
+
+/* 动画 */
+.show{
+opacity:1 !important;
+transform:translateY(0) !important;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -287,158 +311,82 @@ background:#d99f00;
 <body>
 
 <header>
-
 <div class="header-container">
-
-<a href="/">
-<img src="images/logo.png" alt="TL PRO Framing Logo" class="logo">
-</a>
-
+<a href="/"><img src="images/logo.png" class="logo"></a>
 <div class="company-text">
-
 <h1>TL PRO Framing</h1>
 <p>Saskatoon Framing Contractor</p>
-
 </div>
-
 </div>
-
 </header>
 
 <nav>
-
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#reviews">Reviews</a>
 <a href="#quote">Quote</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 <section class="hero">
-
 <h1>Professional Framing Contractor in Saskatoon</h1>
-
-<p>
-TL PRO Framing provides reliable house framing, basement framing and garage framing services.
-</p>
-
+<p>TL PRO Framing provides reliable house framing, basement framing and garage framing services.</p>
 <a href="#quote" class="btn">Get a Free Quote</a>
-
 </section>
 
 <section id="services">
-
 <h2>Our Framing Services</h2>
-
 <div class="services">
-
-<div class="service">
-<h3>House Framing</h3>
-<p>Professional structural framing for new residential construction projects.</p>
+<div class="service">House Framing</div>
+<div class="service">Basement Framing</div>
+<div class="service">Garage Framing</div>
 </div>
-
-<div class="service">
-<h3>Basement Framing</h3>
-<p>Reliable framing for basement development projects.</p>
-</div>
-
-<div class="service">
-<h3>Garage Framing</h3>
-<p>Accurate framing for attached and detached garages.</p>
-</div>
-
-</div>
-
 </section>
 
 <section id="projects">
-
 <h2>Our Projects</h2>
-
 <div class="projects">
-
-<img src="images/project1.jpeg" onclick="openLightbox(this)" alt="House framing project in Saskatoon">
-<img src="images/project2.jpeg" onclick="openLightbox(this)" alt="Basement framing Saskatoon">
-<img src="images/project3.jpeg" onclick="openLightbox(this)" alt="House framing Saskatoon">
-<img src="images/project4.jpeg" onclick="openLightbox(this)" alt="Residential framing Saskatoon">
-<img src="images/project5.jpeg" onclick="openLightbox(this)" alt="House framing project in Saskatoon">
-<img src="images/project6.jpeg" onclick="openLightbox(this)" alt="House framing project in Saskatoon">
-
+<img src="images/project1.jpeg" onclick="openLightbox(this)">
+<img src="images/project2.jpeg" onclick="openLightbox(this)">
+<img src="images/project3.jpeg" onclick="openLightbox(this)">
+<img src="images/project4.jpeg" onclick="openLightbox(this)">
+<img src="images/project5.jpeg" onclick="openLightbox(this)">
+<img src="images/project6.jpeg" onclick="openLightbox(this)">
 </div>
-
 </section>
 
 <section id="reviews">
-
 <h2>Client Reviews</h2>
-
 <div class="testimonials">
-
-<div class="review">
-<p>"Very professional framing crew. Work completed on time and quality was excellent."</p>
-<strong>- Home Builder</strong>
+<div class="review">"Very professional framing crew."</div>
+<div class="review">"Reliable contractor."</div>
+<div class="review">"Highly recommend."</div>
 </div>
-
-<div class="review">
-<p>"Reliable contractor and great communication throughout the project."</p>
-<strong>- Saskatoon Client</strong>
-</div>
-
-<div class="review">
-<p>"Solid framing work and efficient team. Highly recommend."</p>
-<strong>- Construction Partner</strong>
-</div>
-
-</div>
-
 </section>
 
 <section id="quote">
-
 <h2>Request a Free Quote</h2>
-
 <div class="quote-form">
-
 <form action="https://formsubmit.co/info@tlframing.ca" method="POST" enctype="multipart/form-data">
-
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Quote Request - TL Construction & Framing">
-
+<input type="hidden" name="_subject" value="New Quote Request">
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Email Address" required>
-<input type="tel" name="phone" placeholder="Phone Number">
 <textarea name="message" placeholder="Project Details"></textarea>
-
-<label>Upload Your Plans for a Free Framing Quote
-
-Typical response time: 24 hours
-
-Accepted files: PDF / DWG / JPG（optional）</label>
-<input type="file" name="attachment" multiple>
-
-<button type="submit">Submit Quote Request</button>
-
+<input type="file" name="attachment">
+<button type="submit">Submit</button>
 </form>
-
 </div>
-
 </section>
 
 <section id="contact" class="contact">
-
-<h2>Contact TL PRO Framing</h2>
-
-<p>Email: info@tlframing.ca</p>
-<p>Phone: 306-717-2082</p>
-<p>Saskatoon, Saskatchewan</p>
-
+<h2>Contact</h2>
+<p>info@tlframing.ca</p>
+<p>306-717-2082</p>
 </section>
 
 <footer>
-
 <p>© 2026 TL PRO Framing</p>
-
 </footer>
 
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
@@ -448,16 +396,27 @@ Accepted files: PDF / DWG / JPG（optional）</label>
 <a href="tel:13067172028" class="callbtn">Call Now</a>
 
 <script>
-
+// lightbox
 function openLightbox(img){
 document.getElementById("lightbox").style.display="flex";
 document.getElementById("lightbox-img").src=img.src;
 }
-
 function closeLightbox(){
 document.getElementById("lightbox").style.display="none";
 }
 
+// 滚动动画
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".service, .projects img, .review, .quote-form, .contact").forEach(el=>{
+observer.observe(el);
+});
 </script>
 
 </body>
