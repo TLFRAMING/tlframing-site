@@ -1,308 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framing Contractor Saskatoon | TL PRO Framing</title>
+    <meta name="description" content="TL PRO Framing is a reliable framing contractor in Saskatoon specializing in residential and custom home framing for builders.">
+    <meta name="keywords" content="framing contractor Saskatoon, builder framing Saskatoon, residential framing Saskatoon, custom home framing Saskatoon, structural framing Saskatoon">
+    <link rel="canonical" href="https://tlframing.ca/">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --brand-yellow: #F5B400;
+            --brand-dark: #2B2B2B;
+            --light-gray: #f7f7f7;
+        }
 
-<title>Framing Contractor Saskatoon | TL PRO Framing</title>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* 平滑滚动效果 */
+        }
 
-<meta name="description" content="TL PRO Framing is a reliable framing contractor in Saskatoon specializing in residential and custom home framing for builders.">
+        /* HEADER */
+        header {
+            background: var(--brand-dark);
+            color: white;
+            padding: 20px 30px;
+        }
 
-<meta name="keywords" content="framing contractor Saskatoon, builder framing Saskatoon, residential framing Saskatoon, custom home framing Saskatoon, structural framing Saskatoon">
+        .header-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-<link rel="canonical" href="https://tlframing.ca/">
+        .logo {
+            width: 90px;
+            background: white;
+            padding: 6px;
+            border-radius: 6px;
+        }
 
-<style>
-:root{
---brand-yellow:#F5B400;
---brand-dark:#2B2B2B;
---light-gray:#f7f7f7;
-}
+        /* NAV */
+        nav {
+            background: var(--brand-dark);
+            text-align: center;
+            padding: 12px;
+            border-top: 3px solid var(--brand-yellow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-body{
-font-family:Arial, sans-serif;
-margin:0;
-color:#333;
-line-height:1.6;
-}
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-/* HEADER */
-header{
-background:var(--brand-dark);
-color:white;
-padding:20px 30px;
-}
+        nav a:hover {
+            color: var(--brand-yellow);
+        }
 
-.header-container{
-max-width:1100px;
-margin:auto;
-display:flex;
-align-items:center;
-gap:20px;
-}
+        /* HERO */
+        .hero {
+            background: #f4f4f4;
+            padding: 90px 20px;
+            text-align: center;
+        }
 
-.logo{
-width:90px;
-background:white;
-padding:6px;
-border-radius:6px;
-}
+        .hero h1 {
+            font-size: 36px;
+            color: var(--brand-dark);
+            margin-bottom: 10px;
+        }
 
-/* NAV */
-nav{
-background:var(--brand-dark);
-text-align:center;
-padding:12px;
-border-top:3px solid var(--brand-yellow);
-}
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
 
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
-}
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 28px;
+            background: var(--brand-yellow);
+            color: black;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
 
-/* HERO */
-.hero{
-background:#f4f4f4;
-padding:90px 20px;
-text-align:center;
-}
+        .btn:hover {
+            transform: scale(1.05);
+        }
 
-.hero h1{
-font-size:36px;
-color:var(--brand-dark);
-}
+        /* SECTIONS */
+        section {
+            padding: 70px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-.hero p{
-font-size:18px;
-max-width:800px;
-margin:auto;
-}
+        h2 {
+            border-left: 5px solid var(--brand-yellow);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 28px;
-background:var(--brand-yellow);
-color:black;
-text-decoration:none;
-border-radius:6px;
-font-weight:bold;
-}
+        /* GRID LAYOUTS */
+        .services, .projects, .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
 
-/* SECTIONS */
-section{
-padding:70px 20px;
-max-width:1100px;
-margin:auto;
-}
+        .service, .review {
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 10px;
+            border-top: 4px solid var(--brand-yellow);
+        }
 
-/* GRID */
-.services, .projects, .testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
+        /* PROJECT IMAGES */
+        .projects img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* 统一图片大小，防止变形 */
+            border-radius: 10px;
+            display: block;
+            margin-bottom: 10px;
+        }
 
-.service, .review{
-background:var(--light-gray);
-padding:20px;
-border-radius:10px;
-border-top:4px solid var(--brand-yellow);
-}
+        /* FORM */
+        .quote-form input,
+        .quote-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box; /* 防止内边距撑破容器 */
+        }
 
-/* PROJECT */
-.projects img{
-width:100%;
-border-radius:10px;
-}
+        .quote-form button {
+            background: var(--brand-yellow);
+            padding: 14px 30px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 16px;
+        }
 
-/* FORM */
-.quote-form input,
-.quote-form textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:6px;
-}
+        .quote-form button:hover {
+            background: #e0a500;
+        }
 
-.quote-form button{
-background:var(--brand-yellow);
-padding:14px;
-border:none;
-font-weight:bold;
-cursor:pointer;
-}
+        /* CALL BUTTON */
+        .callbtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--brand-yellow);
+            padding: 16px 22px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 999;
+        }
 
-/* CALL BUTTON */
-.callbtn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:var(--brand-yellow);
-padding:16px 22px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-z-index:999;
-}
+        footer {
+            background: var(--brand-dark);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
 
-footer{
-background:var(--brand-dark);
-color:white;
-text-align:center;
-padding:25px;
-}
-</style>
-
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-<div class="header-container">
-<img src="images/logo.png" class="logo">
-<div>
-<h1>TL PRO Framing</h1>
-<p>Saskatoon Framing Contractor</p>
-</div>
-</div>
+    <div class="header-container">
+        <img src="images/logo.png" class="logo" alt="TL PRO Framing Logo">
+        <div>
+            <h1>TL PRO Framing</h1>
+            <p>Saskatoon Framing Contractor</p>
+        </div>
+    </div>
 </header>
 
 <nav>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#reviews">Reviews</a>
-<a href="#quote">Quote</a>
-<a href="#contact">Contact</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#quote">Quote</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-<h1>Reliable Framing Contractor for Saskatoon Builders</h1>
-<p>Fast, precise and dependable framing. Trusted by builders for high-quality structural work.</p>
-<a href="#quote" class="btn">Get a Free Quote</a>
+    <h1>Reliable Framing Contractor for Saskatoon Builders</h1>
+    <p>Fast, precise and dependable framing. Trusted by builders for high-quality structural work.</p>
+    <a href="#quote" class="btn">Get a Free Quote</a>
 </section>
 
-<!-- TRUST -->
 <section>
-<div class="services">
-<div class="service">✔ Serving Saskatoon Area</div>
-<div class="service">✔ Fast Turnaround</div>
-<div class="service">✔ Quality Structural Work</div>
-<div class="service">✔ Reliable Crew</div>
-</div>
+    <div class="services">
+        <div class="service">✔ Serving Saskatoon Area</div>
+        <div class="service">✔ Fast Turnaround</div>
+        <div class="service)️">✔ Quality Structural Work</div>
+        <div class="service">✔ Reliable Crew</div>
+    </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
-<h2>Framing Services</h2>
-<div class="services">
-<div class="service">Residential Framing</div>
-<div class="service">Custom Home Framing</div>
-<div class="service">Basement & Garage Framing</div>
-</div>
+    <h2>Framing Services</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Residential Framing</h3>
+            <p>Expert wood framing for single-family homes and developments.</p>
+        </div>
+        <div class="service">
+            <h3>Custom Home Framing</h3>
+            <p>Precision structural work for unique and complex architectural designs.</p>
+        </div>
+        <div class="service">
+            <h3>Basement & Garage</h3>
+            <p>Quality additions and structural framing for secondary suites.</p>
+        </div>
+    </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
-<h2>Recent Framing Projects in Saskatoon</h2>
-<p>Real job site work showing structural quality and precision.</p>
+    <h2>Recent Framing Projects in Saskatoon</h2>
+    <p>Real job site work showing structural quality and precision.</p>
 
-<div class="projects">
-
-<div>
-<img src="images/project1.jpeg">
-<p>Custom Home Framing - Saskatoon</p>
-</div>
-
-<div>
-<img src="images/project2.jpeg">
-<p>Interior Structural Framing</p>
-</div>
-
-<div>
-<img src="images/project3.jpeg">
-<p>Wall Layout & Framing</p>
-</div>
-
-<div>
-<img src="images/project4.jpeg">
-<p>Interior Structural Framing</p>
-</div>
-
-<div>
-<img src="images/project5.jpeg">
-<p>Roof Structure Framing</p>
-</div>
-
-<div>
-<img src="images/project6.jpeg">
-<p>Full House Framing Project</p>
-</div>
-
-</div>
+    <div class="projects">
+        <div>
+            <img src="images/project1.jpeg" alt="Custom Home Framing project by TL PRO Framing">
+            <p>Custom Home Framing - Saskatoon</p>
+        </div>
+        <div>
+            <img src="images/project2.jpeg" alt="Interior structural framing work">
+            <p>Interior Structural Framing</p>
+        </div>
+        <div>
+            <img src="images/project3.jpeg" alt="Wall layout and framing detail">
+            <p>Wall Layout & Framing</p>
+        </div>
+        <div>
+            <img src="images/project4.jpeg" alt="Interior structural residential framing">
+            <p>Interior Structural Framing</p>
+        </div>
+        <div>
+            <img src="images/project5.jpeg" alt="Roof structure and truss installation">
+            <p>Roof Structure Framing</p>
+        </div>
+        <div>
+            <img src="images/project6.jpeg" alt="Full house framing project overview">
+            <p>Full House Framing Project</p>
+        </div>
+    </div>
 </section>
 
-<!-- REVIEWS -->
 <section id="reviews">
-<h2>Builder Feedback</h2>
-<div class="testimonials">
-<div class="review">Have worked with Tony on a number of jobs, great framer with a great attitude. Easy to work with and pays attention to detail. Looking forward to working with him on future jobs. Thank you Tony for your hard work ethic. 
-  
-————George Paul
-IN/EX CONSTRUCTION LTD."</div>
-<div class="review">"Clean framing and very easy to work with."</div>
-<div class="review">"Reliable crew, will hire again."</div>
-</div>
+    <h2>Builder Feedback</h2>
+    <div class="testimonials">
+        <div class="review">
+            <blockquote>"Have worked with Tony on a number of jobs, great framer with a great attitude. Easy to work with and pays attention to detail."</blockquote>
+            <cite>— George Paul, IN/EX CONSTRUCTION LTD.</cite>
+        </div>
+        <div class="review">
+            <blockquote>"Clean framing and very easy to work with."</blockquote>
+            <cite>— Local Builder</cite>
+        </div>
+        <div class="review">
+            <blockquote>"Reliable crew, will hire again."</blockquote>
+            <cite>— Satisfied Client</cite>
+        </div>
+    </div>
 </section>
 
-<!-- QUOTE -->
 <section id="quote">
-<h2>Request a Free Quote</h2>
-<p>Send us your drawings or project details. We will get back to you quickly with a quote.</p>
+    <h2>Request a Free Quote</h2>
+    <p>Send us your drawings or project details. We will get back to you quickly with a quote.</p>
 
-<div class="quote-form">
-<form action="https://formsubmit.co/info@tlframing.ca" method="POST" enctype="multipart/form-data">
+    <div class="quote-form">
+        <form action="https://formsubmit.co/info@tlframing.ca" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Quote Request from Website">
+            <input type="hidden" name="_next" value="https://tlframing.ca/thank-you.html">
+            <input type="hidden" name="_autoresponse" value="Hi, Thank you for reaching out to TL PRO Framing. Your request has been received. We will get back to you within 24 hours.">
 
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Quote Request">
-<input type="hidden" name="_next" value="https://tlframing.ca/thank-you.html">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <textarea name="message" rows="5" placeholder="Project Details (Type of build, Square footage, Timeline etc.)"></textarea>
+            
+            <p><small>Upload Drawings/Plans (Optional):</small></p>
+            <input type="file" name="attachment" accept=".pdf,.jpg,.jpeg,.png">
 
-<!-- 自动回复 -->
-<input type="hidden" name="_autoresponse" value="Hi,\n\nThank you for reaching out to TL PRO Framing.\n\nYour quote request has been received. We will review your project and get back to you shortly.\n\nIf available, please reply with drawings, plans, or project timeline so we can provide a more accurate estimate.\n\nTypical turnaround time: within 24 hours.\n\nFor urgent inquiries, call 306-717-2082.\n\nRegards,\nTL PRO Framing\nSaskatoon">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Email Address" required>
-<input type="text" name="phone" placeholder="Phone Number" required>
-
-<textarea name="message" placeholder="Project Details"></textarea>
-
-<input type="file" name="attachment">
-
-<button type="submit">Submit Request</button>
-
-</form>
-</form>
-</div>
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2>
-<p>📧 info@tlframing.ca</p>
-<p>📞 306-717-2082</p>
+    <h2>Contact Info</h2>
+    <p>📧 <a href="mailto:info@tlframing.ca">info@tlframing.ca</a></p>
+    <p>📞 <a href="tel:3067172082">306-717-2082</a></p>
+    <p>📍 Serving Saskatoon & Surrounding Area</p>
 </section>
 
 <footer>
-<p>© 2026 TL PRO Framing</p>
+    <p>© 2026 TL PRO Framing | Saskatoon Framing Contractor</p>
 </footer>
 
-<!-- CALL BUTTON -->
-<a href="tel:13067172082" class="callbtn">Call Now</a>
+<a href="tel:3067172082" class="callbtn">📞 Call Now</a>
 
 </body>
 </html>
