@@ -131,54 +131,40 @@
         }
 
         /* PROJECT IMAGES */
-        /* --- 瀑布流图库布局 --- */
-#projects {
-    max-width: 1200px;
-    margin: auto;
-}
-
+       /* --- 优化后的 Flexbox 图库 --- */
 .projects {
-    /* 使用 Column 布局实现瀑布流 */
-    column-count: 3; /* 电脑端显示 3 列 */
-    column-gap: 20px; /* 列之间的间距 */
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* 自动换行 */
+    gap: 15px;      /* 图片之间的间距 */
+    padding: 20px 0;
 }
 
 .project-card {
-    /* 核心属性：防止卡片被截断分在两列 */
-    break-inside: avoid; 
-    display: block;
-    margin-bottom: 20px; /* 卡片上下的间距 */
-    
-    background: white;
+    flex: 1 1 300px; /* 核心：最小宽度300px，自动伸缩填满整行 */
+    height: 300px;   /* 固定高度，保证每一行都整齐划一 */
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: scale(1.03);
+    z-index: 10;
 }
 
 .project-card img {
     width: 100%;
-    height: auto; /* 关键：保持原图比例，不强行拉伸 */
+    height: 100%;
+    object-fit: cover; /* 关键：图片自动裁剪填充，不再拉伸或留白 */
     display: block;
 }
 
-/* --- 响应式适配 --- */
-@media (max-width: 992px) {
-    .projects {
-        column-count: 2; /* 平板端显示 2 列 */
-    }
-}
-
+/* 针对手机端的优化 */
 @media (max-width: 600px) {
-    .projects {
-        column-count: 1; /* 手机端显示 1 列 */
+    .project-card {
+        height: 250px; /* 手机上高度稍微矮一点 */
+        flex: 1 1 100%; /* 每行只显示一张图 */
     }
 }
         /* FORM */
@@ -306,44 +292,38 @@
 
     <div class="projects">
         <div class="project-card">
-            <div class="project-image-wrapper">
             <img src="images/project1.jpeg" alt="Custom Home Framing">
-            </div>
+        </div>
         </div>
 
      <div class="projects">
         <div class="project-card">
-            <div class="project-image-wrapper">
             <img src="images/project2.jpeg" alt="Custom Home Framing">
-            </div>
+        </div>
         </div>
 
     <div class="projects">
         <div class="project-card">
-            <div class="project-image-wrapper">
             <img src="images/project3.jpeg" alt="Custom Home Framing">
-            </div>
+        </div>
         </div>
     
     <div class="projects">
         <div class="project-card">
-            <div class="project-image-wrapper">
             <img src="images/project4.jpeg" alt="Custom Home Framing">
-            </div>
+        </div>
         </div>
   
     <div class="projects">
         <div class="project-card">
-            <div class="project-image-wrapper">
             <img src="images/project5.jpeg" alt="Custom Home Framing">
-            </div>
+        </div>
         </div>
 
     <div class="projects">
         <div class="project-card">
-            <div class="project-image-wrapper">
             <img src="images/project6.jpeg" alt="Deck Framing">
-            </div>
+        </div>
         </div>
 </section>
 
